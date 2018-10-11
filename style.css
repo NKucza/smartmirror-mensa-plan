@@ -1,0 +1,31 @@
+ .region.bottom.left {
+	width: 700px;
+}
+.smallmensa{
+	  font-size: 20px;
+  line-height: 25px;
+   /* width: 550px; */
+}
+
+.table{
+    width: 700px;
+}
+
+.tbody{
+    width: 700px;
+}
+
+.namecell{
+
+    padding-right: 5px;
+    width: 150px;
+    text-align: left;
+    display: table-cell;
+}
+
+.valuecell{
+    padding-left: 3px;
+    width: 550px;
+    text-align: left;
+    display: table-cell;
+}
