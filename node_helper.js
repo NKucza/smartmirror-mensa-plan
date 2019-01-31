@@ -1,6 +1,6 @@
 var NodeHelper = require('node_helper');
 var request = require('request');
-const PythonShell = require('python-shell');
+const {PythonShell} = require('python-shell');
 
 module.exports = NodeHelper.create({
 	start: function () {
@@ -8,11 +8,11 @@ module.exports = NodeHelper.create({
 	},
 
 	getJson: function (mensa_parser, hour_offset) {
-		var self = this;
+		const self = this;
 
-		const pyshell = new PythonShell('modules/' + this.name + '/mensa_requests/' + mensa_parser, { mode: 'json', args: hour_offset});
+		self.pyshell = new PythonShell('modules/' + this.name + '/mensa_requests/' + mensa_parser, { mode: 'json', args: hour_offset});
 
-		pyshell.on('message', function (message) {
+		self.pyshell.on('message', function (message) {
 
             if (message.hasOwnProperty('MensaPlan')) {
             	obj_string = JSON.parse(JSON.stringify(message.MensaPlan))
@@ -27,5 +27,17 @@ module.exports = NodeHelper.create({
 		if (notification === "smartmirror-mensa-plan_GET_JSON") {
 			this.getJson(arg[0], arg[1]);
 		}
+	},
+
+	stop: function() {
+		const self = this;
+		self.pyshell.childProcess.kill('SIGKILL');
+		self.pyshell.end(function (err) {
+           	if (err){
+        		//throw err;
+    		};
+    		console.log('finished');
+		});
 	}
 });
+
