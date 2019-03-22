@@ -1,31 +1,26 @@
- .region.bottom.left {
+/* .region.bottom.left {
 	width: 700px;
-}
-.smallmensa{
-	  font-size: 20px;
-  line-height: 25px;
-   /* width: 550px; */
-}
+} */
 
 .table{
-    width: 700px;
+    width: 1200px;
 }
 
 .tbody{
-    width: 700px;
+    width: 1200px;
 }
 
 .namecell{
 
     padding-right: 5px;
-    width: 150px;
+    width: 200px;
     text-align: left;
     display: table-cell;
 }
 
 .valuecell{
     padding-left: 3px;
-    width: 550px;
+    width: 1000px;
     text-align: left;
     display: table-cell;
 }

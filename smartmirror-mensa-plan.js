@@ -42,7 +42,7 @@ Module.register("smartmirror-mensa-plan", {
 	// Override dom generator.
 	getDom: function () {
 		var wrapper = document.createElement("div");
-		wrapper.className = "smallmensa";
+		wrapper.className = "small";
 
 
 		if (!this.jsonData) {
