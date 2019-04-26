@@ -1,3 +1,12 @@
+/**
+ * @file smartmirror-mensa-plan.js
+ *
+ * @author nkucza
+ * @license MIT
+ *
+ * @see  https://github.com/NKucza/smartmirror-mensa-plan
+ */
+
 'use strict';
 
 Module.register("smartmirror-mensa-plan", {
