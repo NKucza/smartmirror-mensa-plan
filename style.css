@@ -3,24 +3,24 @@
 } */
 
 .table{
-    width: 1200px;
+    width: 600px;
 }
 
 .tbody{
-    width: 1200px;
+    width: 600px;
 }
 
 .namecell{
 
     padding-right: 5px;
-    width: 200px;
+    width: 150px;
     text-align: left;
     display: table-cell;
 }
 
 .valuecell{
     padding-left: 3px;
-    width: 1000px;
+    width: 450px;
     text-align: left;
     display: table-cell;
 }
